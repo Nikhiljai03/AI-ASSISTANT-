@@ -2,6 +2,7 @@ const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognit
 recognition.lang = "en-US";
 
 const btn = document.querySelector("#btn");
+const container = document.querySelector(".container");
 
 btn.addEventListener("click", () => {
     function speak(text) {
@@ -33,17 +34,18 @@ btn.addEventListener("click", () => {
                 openLink("https://www.instagram.com");
             }, 1000);
         } else {
-            speak(`Searching for "${command}"...`);
+            speak(`Searching Google for "${command}"...`);
             setTimeout(() => {
                 openLink(`https://www.google.com/search?q=${encodeURIComponent(command)}`);
             }, 1000);
         }
     }
 
-    speak("Hello, how can I help you?");
     recognition.start();
+    container.classList.add("listening-animation");
 
     recognition.onresult = (event) => {
+        container.classList.remove("listening-animation");
         const command = event.results[0][0].transcript.toLowerCase();
         console.log("Recognized command:", command);
         handleCommands(command);

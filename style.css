@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("images/bg (2).webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding: 40px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center; /* Center-align text */
+    max-width: 300px; /* Control card width */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    gap: 15px;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Add space between title and text */
+    font-weight: 900;
+    letter-spacing: 4px;
+    
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px; /* Add space between text and button */
+}
+
+.start-button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+img{
+    width: 200px;
+    position: relative;
+    left: 200;
+}
